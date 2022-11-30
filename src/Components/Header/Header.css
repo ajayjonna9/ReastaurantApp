@@ -1,0 +1,19 @@
+.header {
+  background: red;
+  position: relative;
+  z-index: 10;
+}
+.headerheading {
+  display: inline-block;
+  margin-left: 100px;
+  color: white;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.imagestyle {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  bottom: 90px;
+  z-index: 1;
+}

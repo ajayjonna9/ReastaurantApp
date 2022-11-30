@@ -1,0 +1,20 @@
+.cart {
+  position: absolute;
+  right: 200px;
+  top: 25px;
+  background-color: dimgray;
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  border-width: 0px;
+  text-align: center;
+}
+.cartitems {
+  width: 40px;
+  background-color: blueviolet;
+  display: inline-block;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 3px;
+}
