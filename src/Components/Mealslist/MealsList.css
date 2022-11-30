@@ -5,22 +5,52 @@
   position: relative;
   left: 250px;
   bottom: 200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
-.mealsdata {
+.mealsname {
   padding: 10px 0px 0px 20px;
-  height: 15px;
+  font-weight: bold;
 }
 .mealsdes {
   padding: 0px 0px 0px 20px;
-
-  height: 5px;
+  font-style: italic;
+  font-size: small;
 }
 .mealsprice {
   color: red;
   padding: 0px 0px 0px 20px;
-
-  height: 10px;
 }
 hr {
   width: 770px;
+}
+.mealsdata {
+  display: inline-block;
+}
+.mealsadd {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  margin: 15px;
+}
+.itemcountinput {
+  width: 35px;
+  border-radius: 5px;
+  border-width: 1px;
+}
+.mealsaddamount {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.mealsaddbutton {
+  display: inline-block;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 15px;
+  width: 80px;
+  text-align: center;
+
+  margin: 10px 0px 0px 5px;
+  border-width: 0px;
+  height: 30px;
 }

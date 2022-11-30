@@ -3,10 +3,23 @@ import "./MealsList.css";
 
 const MealsList = (props) => {
   return (
-    <React.Fragment className="lis">
-      <h4 className="mealsdata">{props.name}</h4>
-      <p className="mealsdes">{props.des}</p>
-      <h5 className="mealsprice">${props.price}</h5>
+    <React.Fragment>
+      <div className="mealsdata">
+        <div className="mealsname">{props.name}</div>
+        <div className="mealsdes">{props.des}</div>
+        <div className="mealsprice">${props.price}</div>
+      </div>
+      <div className="mealsadd">
+        <div className="mealsaddamount"> Amount</div>
+        <input
+          type="number"
+          name="itemcount"
+          className="itemcountinput"
+        ></input>
+        <div>
+          <button className="mealsaddbutton">+Add</button>
+        </div>
+      </div>
       <hr />
     </React.Fragment>
   );
