@@ -1,0 +1,26 @@
+.card {
+  background: white;
+  width: 800px;
+  border-radius: 10px;
+  position: relative;
+  left: 250px;
+  bottom: 200px;
+}
+.mealsdata {
+  padding: 10px 0px 0px 20px;
+  height: 15px;
+}
+.mealsdes {
+  padding: 0px 0px 0px 20px;
+
+  height: 5px;
+}
+.mealsprice {
+  color: red;
+  padding: 0px 0px 0px 20px;
+
+  height: 10px;
+}
+hr {
+  width: 770px;
+}

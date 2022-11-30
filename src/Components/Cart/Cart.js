@@ -10,7 +10,7 @@ const Cart = () => {
           <CartIcon />
         </span>
         &nbsp; &nbsp;
-        <span>Your Cart </span> &nbsp;
+        <span className="cartname">Your Cart </span> &nbsp;
         <span className="cartitems">3</span>
       </button>
     </React.Fragment>
