@@ -1,0 +1,19 @@
+.summary {
+  height: 250px;
+  width: 600px;
+  background-color: dimgray;
+  border-radius: 15px;
+  position: relative;
+  bottom: 220px;
+  left: 350px;
+  z-index: 1;
+}
+.summaryheading {
+  color: white;
+  padding: 25px 10px 0px 50px;
+}
+.summarydetails {
+  color: white;
+  padding: 10px 10px 0px 10px;
+  font-size: 15px;
+}

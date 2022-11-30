@@ -18,6 +18,3 @@ const Cart = () => {
 };
 
 export default Cart;
-<button>
-  Your Cart <div>0</div>
-</button>;
