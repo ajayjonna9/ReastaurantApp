@@ -1,0 +1,12 @@
+.cart_details_price {
+  position: relative;
+  left: 75%;
+  font-weight: bold;
+}
+.cart_details_totalamount {
+  font-weight: bold;
+}
+.cart_buttons {
+  position: relative;
+  left: 75%;
+}

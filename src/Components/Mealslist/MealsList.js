@@ -1,5 +1,7 @@
 import React from "react";
 import "./MealsList.css";
+import Inputfield from "../UI/Inputfield";
+import Button from "../UI/Button";
 
 const MealsList = (props) => {
   return (
@@ -9,17 +11,31 @@ const MealsList = (props) => {
         <div className="mealsdes">{props.des}</div>
         <div className="mealsprice">${props.price}</div>
       </div>
-      <div className="mealsadd">
-        <div className="mealsaddamount"> Amount</div>
-        <input
-          type="number"
-          name="itemcount"
-          className="itemcountinput"
-        ></input>
+      <form className="mealsadd">
+        <Inputfield
+          input={{
+            type: "number",
+            id: "forminput",
+            name: "itemcount",
+
+            label: "Amount",
+            min: 1,
+            max: 5,
+            defaultValue: 1,
+            step: 1,
+          }}
+        ></Inputfield>
+
         <div>
-          <button className="mealsaddbutton">+Add</button>
+          <Button
+            properties={{
+              type: "submit",
+            }}
+          >
+            +Add
+          </Button>
         </div>
-      </div>
+      </form>
       <hr />
     </React.Fragment>
   );
