@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import "./Model.css";
 const Backdrop = (props) => {
   return <div className="backdrop"></div>;
@@ -9,10 +10,15 @@ const ModelOverlay = (props) => {
 
 const Model = (props) => {
   return (
-    <div>
-      <Backdrop />
-      <ModelOverlay>{props.children}</ModelOverlay>
-    </div>
+    <React.Fragment>
+      {ReactDOM.createPortal(<Backdrop />, document.getElementById("overlays"))}
+      ;
+      {ReactDOM.createPortal(
+        <ModelOverlay>{props.children}</ModelOverlay>,
+        document.getElementById("overlays")
+      )}
+      ;
+    </React.Fragment>
   );
 };
 

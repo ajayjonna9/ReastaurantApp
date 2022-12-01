@@ -2,10 +2,13 @@ import React from "react";
 import "./Cart.css";
 import CartIcon from "./CartIcon";
 
-const Cart = () => {
+const Cart = (props) => {
+  const onCartClick = (e) => {
+    props.cartOpen(true);
+  };
   return (
     <React.Fragment>
-      <button className="cart">
+      <button className="cart" onClick={onCartClick}>
         <span>
           <CartIcon />
         </span>

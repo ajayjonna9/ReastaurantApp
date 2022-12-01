@@ -4,7 +4,10 @@ import "./CartDetails.css";
 import Card from "../UI/Card";
 import Model from "./Model";
 
-const CartDetails = () => {
+const CartDetails = (props) => {
+  const onCartclose = (e) => {
+    props.cartOpen(false);
+  };
   const cartdetailsarr = (
     <ul>
       {[{ id: "c1", name: "Sushi", amount: 29.99 }].map((item) => {
@@ -20,8 +23,10 @@ const CartDetails = () => {
           <span className="cart_details_totalamount">Total Amount</span>
           <span className="cart_details_price">29,99</span>
           <div className="cart_buttons">
-            <Button>Close</Button>
-            <Button>Order</Button>
+            <button className="mealsaddbutton" onClick={onCartclose}>
+              Close
+            </button>
+            <button className="mealsaddbutton">Order</button>
           </div>
         </div>
       </div>

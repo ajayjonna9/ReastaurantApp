@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Components/Header/Header";
 import RestaurantSummary from "./Components/RestaurantSummary/RestaurantSummary";
 import MealsList from "./Components/Mealslist/MealsList";
@@ -7,11 +7,15 @@ import Card from "./Components/UI/Card";
 import CartDetails from "./Components/Cart/CartDetails";
 
 const App = () => {
+  const [cartOpen, setCartOpen] = useState(false);
+
   return (
     <div>
-      <Header />
+      <Header cartOpen={setCartOpen} />
+
       <RestaurantSummary />
-      <CartDetails></CartDetails>
+      {cartOpen && <CartDetails cartOpen={setCartOpen}></CartDetails>}
+
       <Card>
         {MealsData.map((data) => {
           return (
