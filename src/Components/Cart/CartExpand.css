@@ -1,0 +1,46 @@
+.cartitemname {
+  font-weight: 10px;
+}
+.cartitemprice {
+  color: red;
+}
+.cartitemquantity {
+  margin-left: 20px;
+  display: inline-block;
+  border: 1px solid red;
+  width: 200;
+  width: 40px;
+  text-align: center;
+  border-radius: 5px;
+}
+.cartincanddecebutton {
+  width: 45px;
+  height: 35px;
+  background: white;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: 1px solid red;
+  color: red;
+  text-align: center;
+  font-weight: 100px;
+
+  font-size: larger;
+}
+.cartincanddecebutton:hover {
+  background-color: beige;
+}
+.cartdetails {
+  display: inline-block;
+}
+.cardbuttons {
+  position: absolute;
+  right: 25px;
+  top: 5px;
+}
+.cartexpanddetails {
+  position: relative;
+}
+.horizontalline {
+  width: 620px;
+  border-color: orange;
+}

@@ -19,9 +19,9 @@ const MealsList = (props) => {
       id: props.id,
       name: props.name,
       price: props.price,
-      quantity: val,
+      quantity: Number(val),
     };
-    contexdata.addids(props.id);
+
     console.log(obj);
     contexdata.addItem(obj);
   };
@@ -42,10 +42,10 @@ const MealsList = (props) => {
             name: "itemcount",
 
             label: "Amount",
-            min: "1",
-            max: "5",
-            defaultValue: "1",
-            step: "1",
+            min: 1,
+            max: 5,
+            defaultValue: 1,
+            step: 1,
           }}
         ></Inputfield>
 

@@ -3,26 +3,53 @@ import Contex from "./Contex";
 
 const ContexProvider = (props) => {
   const [itemValues, setItemValues] = useState([]);
-  const [idVal, setIds] = useState([]);
-  const addItemToCart = (item) => {
-    console.log(item.id);
 
-    console.log(idVal);
+  const addItemToCart = (item) => {
     setItemValues((pre) => {
-      return [...pre, item];
+      console.log("previous", pre);
+      const indexOfExistingElement = pre.findIndex((preitem) => {
+        return preitem.id === item.id;
+      });
+      const existingElement = pre[indexOfExistingElement];
+      if (existingElement) {
+        let updatedElement = {
+          ...existingElement,
+          quantity: existingElement.quantity + Number(item.quantity),
+        };
+        pre[indexOfExistingElement] = updatedElement;
+        return [...pre];
+      } else {
+        return [...pre, item];
+      }
+    });
+    console.log("helllo", itemValues);
+  };
+  const deleteItemToCart = (id) => {
+    setItemValues((pre) => {
+      const indexOfReducingElement = pre.findIndex((preitem) => {
+        return preitem.id === id;
+      });
+      const reducingElement = pre[indexOfReducingElement];
+      if (reducingElement.quantity > 1) {
+        let updatedElement = {
+          ...reducingElement,
+          quantity: reducingElement.quantity - 1,
+        };
+        pre[indexOfReducingElement] = updatedElement;
+        return [...pre];
+      } else {
+        const newpre = pre.filter((item) => {
+          return item.id !== id;
+        });
+        pre = [...newpre];
+        return [...pre];
+      }
     });
   };
-  const deleteItemToCart = (id) => {};
-  const addingIds = (id) => {
-    setIds((pre) => {
-      return [...pre, id];
-    });
-  };
+
   const contexValues = {
     items: itemValues,
-    totalamount: 0,
-    itemsids: idVal,
-    addids: addingIds,
+
     addItem: addItemToCart,
     removeItem: deleteItemToCart,
   };

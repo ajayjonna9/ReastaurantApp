@@ -24,3 +24,21 @@
   border-width: 0px;
   height: 30px;
 }
+.mealsaddbutton:hover {
+  background-color: darkmagenta;
+}
+.mealsclearbutton {
+  display: inline-block;
+  background-color: white;
+  color: purple;
+  border-radius: 15px;
+  width: 80px;
+  text-align: center;
+  border: 2px solid purple;
+  margin: 10px 0px 0px 5px;
+
+  height: 30px;
+}
+.mealsclearbutton:hover {
+  background-color: wheat;
+}
