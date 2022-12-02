@@ -7,7 +7,12 @@ const Inputfield = (props) => {
       <label htmlFor={props.input.id} className="mealsaddamount">
         {props.input.label}
       </label>
-      <input className="itemcountinput" {...props.input}></input>
+      <input
+        className="itemcountinput"
+        {...props.input}
+        onChange={props.onchange}
+        value={props.val}
+      ></input>
     </div>
   );
 };

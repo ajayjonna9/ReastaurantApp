@@ -8,7 +8,9 @@
 }
 .cart_buttons {
   position: relative;
-  left: 75%;
+  left: 70%;
+
+  width: 175px;
 }
 .mealsaddbutton {
   display: inline-block;
